@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+html {
+  background-color: #009280;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5rem;
+  max-width: 24rem;
+  border-radius: 15px;
+  border: none;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.input::placeholder {
+  color: black;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button-container {
+  text-align: center;
+}
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 10px;
+  font-size: 20px;
+  border: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button::placeholder {
+  color: black;
+}
+
+.checkboxes {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5rem;
+}
+
+.checkboxes label {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding-right: 5rem;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
