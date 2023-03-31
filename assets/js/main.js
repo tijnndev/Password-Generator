@@ -41,8 +41,8 @@ input.addEventListener('click', async (e) => {
         if (document.execCommand('copy')) {
 
             Swal.fire(
-                'Good job!',
-                'You clicked the button!',
+                '',
+                'Succesfully copied the password.',
                 'success'
             )
         }
