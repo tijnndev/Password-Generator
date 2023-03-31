@@ -4,6 +4,7 @@ html {
   background-color: #009280;
   margin: 0;
   padding: 0;
+  font-family: "Poppins", serif;
 }
 
 body {
@@ -26,6 +27,9 @@ body {
   position: relative;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  font-family: "Poppins", serif;
+  font-weight: 100
 }
 
 .input::placeholder {
@@ -39,6 +43,7 @@ body {
 .button-container {
   text-align: center;
 }
+
 .button {
   display: block;
   margin-left: auto;
@@ -48,6 +53,9 @@ body {
   border-radius: 10px;
   font-size: 20px;
   border: none;
+
+  font-family: "Poppins", serif;
+  font-weight: 300
 }
 
 .button:hover {
@@ -68,6 +76,8 @@ body {
 .checkboxes label {
   display: inline-block;
   margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
   padding-right: 5rem;
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -77,4 +87,82 @@ input[type="checkbox"] {
   width: 25px;
   height: 25px;
   border-radius: 50%;
+}
+
+/* hide default checkbox */
+.custom-checkbox {
+  display: none;
+}
+
+/* style label */
+label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+/* style checked state */
+.custom-checkbox:checked+.checkbox-label::before {
+  content: "\2713";
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+/* style unchecked state */
+.custom-checkbox+.checkbox-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* style label text */
+.checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+
+.custom-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox .checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #aaa;
+  margin-right: 5px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.custom-checkbox .checkbox-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+.checkbox-icon::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.swal2-popup {
+  font-family: "Poppins", serif;
 }

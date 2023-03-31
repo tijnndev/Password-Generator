@@ -1,11 +1,10 @@
 const button = document.querySelector('.button')
 const input = document.querySelector('.input')
-const symbol = document.getElementById('symbol')
+const symbol = document.getElementById('symbols')
 const numbers = document.getElementById('numbers')
 
 button.addEventListener('click', async (e) => {
     input.placeholder = randomString(12);
-
 })
 function randomString(len) {
     let charSet = ""
@@ -39,11 +38,14 @@ input.addEventListener('click', async (e) => {
         clipboard.value = input.placeholder;
         document.body.appendChild(clipboard);
         clipboard.select();
-        if (document.execCommand('copy'))
-            Swal.fire({
-                icon: 'success',
-                title: 'Succes!',
-                text: 'Password succesfully copied!'
-            })
+        if (document.execCommand('copy')) {
+
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
+        }
+
     }
 })
